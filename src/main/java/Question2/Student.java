@@ -19,17 +19,23 @@ import java.text.ParseException;
 class Student
 {
     @StudentAnno(sno="000",name = "Anomy",age = 0)
-    @ExcelProperty(value = "{%s}",index = 0)
+//    @ExcelProperty(value = "学号",index = 0)
+    @ExcelProperty(index = 0)
     private String sno;
-    @ExcelProperty(value = "{%s}",index = 1)
+//    @ExcelProperty(value = "{姓名",index = 1)
+    @ExcelProperty(index = 1)
     private String name;
-    @ExcelProperty(value = "{%s}",index = 2)
+//    @ExcelProperty(value = "性别",index = 2)
+    @ExcelProperty(index = 2)
     private String sex;
-    @ExcelProperty(value = "{%s}",index = 3)
+//    @ExcelProperty(value = "年龄",index = 3)
+    @ExcelProperty(index = 3)
     private int age;
-    @ExcelProperty(value = "{%s}",index = 4)
+//    @ExcelProperty(value = "地址",index = 4)
+    @ExcelProperty(index = 4)
     private String address;
-    @ExcelProperty(value = "{%s}",index = 5)
+//    @ExcelProperty(value = "生日",index = 5)
+    @ExcelProperty(index = 5)
     private Date birthday;
     public String getSno() {
         return sno;

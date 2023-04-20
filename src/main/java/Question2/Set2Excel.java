@@ -14,14 +14,17 @@ import java.util.Map;
  * @date 2023/4/19
  */
 class Set2Excel {
-    public static void toExcel(Set<Student> mySet,String filePath){
-        List<Student> list1 = new ArrayList<Student>(mySet);
+    public static void toExcel(Set<Object> mySet,String filePath){
+        List<Object> list1 = new ArrayList<Object>(mySet);
         System.out.println(list1);
         Class studentClass=Student.class;
         Field[] fields = studentClass.getDeclaredFields();
+//        List<String> heads=new ArrayList<>();
         for(Field field : fields){
             System.out.println(field.getName());
+//            heads.add(field.getName());
         }
+//        list1.add(0,heads);
         EasyExcel.write(filePath, studentClass).sheet("学生表").doWrite(list1);
         System.out.println("ok");
     }
