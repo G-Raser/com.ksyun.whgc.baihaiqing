@@ -1,4 +1,10 @@
 package Question2;
+import com.alibaba.excel.EasyExcel;
+import com.alibaba.excel.ExcelWriter;
+import com.alibaba.excel.annotation.ExcelIgnore;
+import com.alibaba.excel.annotation.ExcelProperty;
+import com.alibaba.excel.write.metadata.WriteSheet;
+
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
 import java.util.Date;
@@ -7,15 +13,22 @@ import java.text.ParseException;
  * @author Haiqing Bai
  * @Date 2023/4/19
  */
-//学生类
+////学生类
+//@TableName()
 class Student
 {
-    @AnnotionBase(sno="000",name = "Anomy",age = 0)
+    @StudentAnno(sno="000",name = "Anomy",age = 0)
+    @ExcelProperty(value = "学生编号",index = 0)
     private String sno;
-    private String address;
+    @ExcelProperty(value = "学生姓名",index = 1)
     private String name;
-    private int age;
+    @ExcelProperty(value = "性别",index = 2)
     private char sex;
+    @ExcelProperty(value = "年龄",index = 3)
+    private int age;
+    @ExcelProperty(value = "家庭住址",index = 4)
+    private String address;
+    @ExcelProperty(value = "出生日期",index = 5)
     private Date birthday;
 
     //有参数的构造函数
