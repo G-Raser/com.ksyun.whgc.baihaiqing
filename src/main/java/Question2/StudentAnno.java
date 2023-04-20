@@ -22,5 +22,5 @@ public @interface StudentAnno {
     String address() default "earth";
     String name() default "Anomy";
     int age() default 0;
-    char sex() default '?';
+    String sex() default "?";
 }
