@@ -4,6 +4,7 @@ import com.alibaba.excel.ExcelWriter;
 import com.alibaba.excel.annotation.ExcelIgnore;
 import com.alibaba.excel.annotation.ExcelProperty;
 import com.alibaba.excel.write.metadata.WriteSheet;
+import lombok.Data;
 
 import java.util.Calendar;
 import java.text.SimpleDateFormat;
@@ -15,6 +16,7 @@ import java.text.ParseException;
  */
 ////学生类
 //@TableName()
+@Data
 class Student
 {
     @StudentAnno(sno="000",name = "Anomy",age = 0)
@@ -53,45 +55,28 @@ class Student
     public Student()
     {
     }
-    String getSno()
-    {
+
+    String getSno() {
         return sno;
     }
-    String getAddress()
-    {
+
+    String getAddress() {
         return address;
     }
-    String getName()
-    {
+
+    String getName() {
         return name;
     }
-    char getSex()
-    {
+
+    char getSex() {
         return sex;
     }
-    Date getBirthday()
-    {
+
+    Date getBirthday() {
         return birthday;
     }
-    int getAge()
-    {
+
+    int getAge() {
         return age;
-    }
-@Override
-public String toString() {
-    return "Student{" +
-            "name='" + name + '\'' +
-            ", age=" + age +
-            ", sno='" + sno + '\'' +
-            ", address='" + address + '\'' +
-            ", sex='" + sex + '\'' +
-            ", birthday='" + birthday + '\'' +
-            '}';
-}
-    void print()
-    {
-        System.out.println("学生信息：" + '\n');
-        System.out.println("       " + "学号" + "                   " + "地址" + "          " + "姓名" + "    " + "性别" + "   " + "出生日期" + '\n');
-        System.out.println(this.sno + "   " + this.address + "     " + this.name + "    " + this.sex + "   " + this.birthday + '\n');
     }
 }
