@@ -1,6 +1,10 @@
 # 金山云知识导入基础编程题
-本次项目git提交id为G-Raser，主要结构如下图所示。
-![img.png](imgs/img1.png)
+本次项目git提交用户为G-Raser，主要结构如下图所示。
+![img.png](imgs/img1.png)  
+提交记录如下图所示。  
+![img.png](imgs/img.png)
+git提交commit id如下所示。
+![img_1.png](imgs/img_1.png)
 1. 第一题  
 实现路径：  
 src/main/java/Question1/MyStringUtils.java  
