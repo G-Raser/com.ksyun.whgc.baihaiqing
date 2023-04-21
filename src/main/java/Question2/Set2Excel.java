@@ -16,16 +16,19 @@ import java.util.Map;
 class Set2Excel {
     public static void toExcel(Set<Object> mySet,String filePath){
         List<Object> list1 = new ArrayList<Object>(mySet);
+        System.out.println("文件输出路径：");
+        System.out.println(filePath);
+        System.out.println("当前集合对应列表：");
         System.out.println(list1);
         Class studentClass=Student.class;
         Field[] fields = studentClass.getDeclaredFields();
-//        List<String> heads=new ArrayList<>();
-        for(Field field : fields){
-            System.out.println(field.getName());
-//            heads.add(field.getName());
-        }
-//        list1.add(0,heads);
+////        List<String> heads=new ArrayList<>();
+//        for(Field field : fields){
+//            System.out.println(field.getName());
+////            heads.add(field.getName());
+//        }
+////        list1.add(0,heads);
         EasyExcel.write(filePath, studentClass).sheet("学生表").doWrite(list1);
-        System.out.println("ok");
+        System.out.println("集合数据输出Excel文件完毕！");
     }
 }

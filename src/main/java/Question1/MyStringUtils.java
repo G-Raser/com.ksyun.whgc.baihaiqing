@@ -48,8 +48,7 @@ public class MyStringUtils {
                 markedChar=key;
             }
         }
-        System.out.println(markedChar);
-        System.out.println(maxValue);
+        System.out.println(markedChar+' '+maxValue);
     }
 
     public static String getLonger(String target) {

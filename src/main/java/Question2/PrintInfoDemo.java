@@ -15,11 +15,11 @@ public class PrintInfoDemo {
         Set<Object> set = new HashSet<Object>();
         set.add(new Student("123","China","张三","女","2006-03-09"));
         set.add(new Student("111","USA","罗斯","男","2003-01-19"));
-        Iterator<Object> it = set.iterator();
-        while (it.hasNext()) {
-            Student myStudent = (Student) it.next();
-            System.out.println(myStudent.getName());
-        }
+//        Iterator<Object> it = set.iterator();
+//        while (it.hasNext()) {
+//            Student myStudent = (Student) it.next();
+//            System.out.println(myStudent.getName());
+//        }
         String filePath="C:\\Users\\Administrator\\Desktop\\Test1.xlsx";
         toExcel(set,filePath);
     }
