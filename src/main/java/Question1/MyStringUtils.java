@@ -59,16 +59,15 @@ public class MyStringUtils {
 
             return"illegal";
         }
-        // 结束递归标识
+        // 结束递归
         boolean out = false;
         StringBuffer sb = new StringBuffer();
         for(int i=0; i<target.length();i++) {
             String chat = target.charAt(i) + "";
             if(!sb.toString().contains(chat)) {
                 sb.append(chat);
-                //判断是否已经遍历完整个字符串
                 if(i == target.length() -1) {
-
+                    //整个字符串是否完全遍历
                     longerStr = sb.toString();
                     maxLonger = sb.length();
                     out = true;
