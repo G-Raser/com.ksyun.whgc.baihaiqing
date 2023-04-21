@@ -1,6 +1,7 @@
 package Question3;
 /**
- * @author Administrator
+ * @author Haiqing Bai
+ * @date 2023/4/20
  */
 public class ThreadDemo
 {

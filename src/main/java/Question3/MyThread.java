@@ -1,5 +1,8 @@
 package Question3;
-
+/**
+ * @author Haiqing Bai
+ * @date 2023/4/20
+ */
 public class MyThread {
     int count = 1;
     public synchronized void printA() {  //A线程
