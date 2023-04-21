@@ -4,12 +4,13 @@ package Question3;
  */
 public class ThreadDemo
 {
+    public static final int PRINTSIZE = 5;
     public static void main(String[] args) {
         MyThread thread = new MyThread();
         new Thread(new Runnable() {
             @Override
             public void run() {
-                for(int i=0; i<10; i++) {
+                for(int i=0; i<PRINTSIZE; i++) {
                     thread.printA();
                 }
             }
@@ -18,7 +19,7 @@ public class ThreadDemo
         new Thread() {
             @Override
             public void run() {
-                for(int i=0; i<10; i++) {
+                for(int i=0; i<PRINTSIZE; i++) {
                     thread.printB();
                 }
             }
@@ -27,7 +28,7 @@ public class ThreadDemo
         new Thread(new Runnable() {
             @Override
             public void run() {
-                for(int i=0; i<10; i++) {
+                for(int i=0; i<PRINTSIZE; i++) {
                     thread.printC();
                 }
             }
